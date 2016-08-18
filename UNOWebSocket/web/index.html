@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>UNO Game</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link href="libs/chui/chui-ios-3.9.2.css" rel="stylesheet" />        
+        <script src="libs/jquery-3.1.0.js"></script>
+        <script src="libs/chui/chui-3.9.2.js"></script>        
+        <script src="jscript/index.js"></script>
+    </head>
+    <body>
+        <nav>
+            <h1>Create a UNO Game</h1>
+        </nav>        
+        <article id="createGame">
+            <section>                
+                <ul class="list" id="new_game">
+                    <li>
+                        <label for="gameName">Game Name</label>
+                        <input type="text" name="gname" id="gamename">
+                    </li>                    
+                    <li>
+                        <button type="submit" id="createBtn">Create New Game</button>
+                    </li>
+                </ul>
+            </section>
+        </article>
+        
+        <nav>
+            <h1>Created Game List</h1>
+        </nav>        
+        <article id="waitplayer">
+            <section>                           
+                <ul class="list" id="game_list">
+                    <li>
+                        <label for="gameID">Game ID</label>
+                        <span id="gameid"></span>
+                    </li>
+                    
+                    <li>
+                        <label for="gameName">Game Name</label>
+                        <span id="gname"></span>
+                    </li>
+                </ul>    
+                
+                <div>
+                    <button type="submit" id="ownerstartBtn">Start Game</button>
+                </div>   
+                <div id="wsStatus"></div>
+                        
+                    
+                
+                
+            </section>
+        </article>
+        
+        <nav>
+            <h2>Players</h2>
+        </nav>
+        
+        <article id="deck">
+            <section>
+                <h2>Players</h2>                
+                <ul class="list" id="playerlist">
+                </ul>
+                <ul id="pid">                    
+                </ul>
+<!--                <div id="game">                    
+                </div>-->
+                <div id="discardPile">
+                </div>
+                <div id="drawPile">                    
+                </div>
+                <!--<span id="gid"></span>-->    
+            </section>
+        </article>
+    </body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>UNO Game</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link href="libs/chui/chui-ios-3.9.2.css" rel="stylesheet" />        
+        <script src="libs/jquery-3.1.0.js"></script>
+        <script src="libs/chui/chui-3.9.2.js"></script>        
+        <script src="jscript/joingame.js"></script>
+        <script>
+		$(function() {
+			$('#inhand').hover(function() {
+  				$(this).animate({
+    				top: "150px"
+  				}, 1000);
+			});
+
+	  		$('#inhand').on("singletap", "img", function() {
+        		$(this).remove();
+    		});
+		});
+  	</script>
+    </head>
+    <body>
+        <nav>
+            <h1>ACTIVE GAME LIST</h1>
+        </nav>        
+        <article id="show-allgames">
+            <section>                
+                <ul class="list" id="gamelist">
+                </ul>               
+            </section>
+        </article>
+        
+        <nav>
+            <h1>Add Player</h1>
+        </nav>        
+        <article id="joingame">
+            <section>
+                <ul class="list" id="pname">
+                    <li>
+                        <label>Game ID</label>
+                        <span id="gameid"></span>
+                    </li>
+                    <li>
+                        <label>Player Name</label>
+                        <input type="text" name="playername" id="playername">                        
+                    </li>
+                </ul> 
+                
+                <div>
+                    <button type="submit" id="joingameBtn">Join Game</button> 
+                </div>         
+            </section>
+        </article>
+        
+        <nav>
+            <h1>Waiting Game</h1>
+        </nav>
+        
+        <article id="waiting">
+            <section>
+                <ul class="list" id="pname">
+                    <li>
+                        Waiting List for UNO with friends to start
+                    </li>
+                </ul> 
+                <ul id="playerlist" class="list">
+                    <li></li>                   
+                </ul>
+                <input type='hidden' id='pid'/>
+                <input type='hidden' id='gid'/>
+              
+                <div id="wsStatus"></div>
+            </section>
+        </article>
+        
+        <nav>
+            <h2>Play Uno With Friend</h2>
+        </nav>
+        <article id="startdeal">
+            <section >
+                <ul class="list" id="inhand"> 
+                    
+                </ul>               
+            </section>                
+        </article>
+    </body>
+</html>
